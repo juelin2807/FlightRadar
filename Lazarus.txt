@@ -1,0 +1,26 @@
+Packages für Lazarus nach installieren oder im Projekt hinzufügen
+
+charactermap_ide_pkg
+jcfidelazarus
+messagecomposerpkg
+leakview
+LazideSearchPanel
+MPlayer
+ZEOS		Datenbankzugriff
+BGRA		Graphiktools
+Map		Graphiktools
+HtmlViewer	WebBrowser      
+LazActiveX	 Printertool  in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+Printers4Lazarus Printertool  in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+LCLBase 	Farben	      in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+ZAbstractRODataset Datenbank  in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+                                nach zcomponent suchen
+Das Package muss man jetzt nachinstallieren. Es heisst "charactermap_ide_pkg" (Package -> Installierte Packages einrichten..)
+
+Eventuell installieren
+SQLDB		Datenbankzugriff	: 	https://github.com/CharlyTango/ct_sqldatabaseconnection
+
