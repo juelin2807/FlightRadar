@@ -16,6 +16,12 @@ Printers4Lazarus Printertool  in "Projekt > Projektinspektor >
                                 Hinzufügen > Neue Anforderung"
 LCLBase 	Farben	      in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
+SynEdit 		      in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+TurboPowerPro 		      in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+LazMapViewerPkg	Karte	      in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
 ZAbstractRODataset Datenbank  in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
                                 nach zcomponent suchen
