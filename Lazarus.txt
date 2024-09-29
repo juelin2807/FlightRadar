@@ -9,7 +9,8 @@ MPlayer
 ZEOS		Datenbankzugriff
 BGRA		Graphiktools
 Map		Graphiktools
-HtmlViewer	WebBrowser      
+HtmlViewer	WebBrowser
+pl_win_api	Shellexecute      
 LazActiveX	 Printertool  in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
 Printers4Lazarus Printertool  in "Projekt > Projektinspektor > 
@@ -21,6 +22,8 @@ SynEdit 		      in "Projekt > Projektinspektor >
 TurboPowerPro 		      in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
 LazMapViewerPkg	Karte	      in "Projekt > Projektinspektor > 
+                                Hinzufügen > Neue Anforderung"
+pl_win_api	ShellExecute  in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
 ZAbstractRODataset Datenbank  in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
