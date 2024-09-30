@@ -10,7 +10,8 @@ ZEOS		Datenbankzugriff
 BGRA		Graphiktools
 Map		Graphiktools
 HtmlViewer	WebBrowser
-pl_win_api	Shellexecute      
+pl_win_api	Shellexecute
+WebView4Delphi-main Webbrowser  aus dem Internet runter geladen      
 LazActiveX	 Printertool  in "Projekt > Projektinspektor > 
                                 Hinzufügen > Neue Anforderung"
 Printers4Lazarus Printertool  in "Projekt > Projektinspektor > 
@@ -32,4 +33,7 @@ Das Package muss man jetzt nachinstallieren. Es heisst "charactermap_ide_pkg" (P
 
 Eventuell installieren
 SQLDB		Datenbankzugriff	: 	https://github.com/CharlyTango/ct_sqldatabaseconnection
+
+Nach Installation neuer Version von Lazarus Packages nachinstallieren
+
 
