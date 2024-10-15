@@ -2409,28 +2409,42 @@ begin
             ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-abbruch.bat'), nil, nil, SW_SHOWMINIMIZED);
           end;
         end;
-        h1:=42;
-        if hr = 0 then
+        if habb = 0 then
         begin
-          h1:=ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-copy.bat'), nil, nil, SW_HIDE);
-          sleep(zeit);
-        end;
-        if h1 = 42 then
-        begin
-          if FileExists(ExtractFilePath(ParamStr(0))+'daten.fly') then
+          h1:=42;
+          if hr = 0 then
           begin
-            FileMode:=fmOpenRead;
-            AssignFile(fnum, ExtractFilePath(ParamStr(0))+'daten.fly');
-            hr:=0;
-            try
-              Reset(fnum);
-            except
-              hr:=1;
-            end;
-            if hr = 0 then
+            h1:=ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-copy.bat'), nil, nil, SW_HIDE);
+            sleep(zeit);
+          end;
+          if h1 = 42 then
+          begin
+            if FileExists(ExtractFilePath(ParamStr(0))+'daten.fly') then
             begin
-              ffehl:=0;
-              ho:=1;
+              FileMode:=fmOpenRead;
+              AssignFile(fnum, ExtractFilePath(ParamStr(0))+'daten.fly');
+              hr:=0;
+              try
+                Reset(fnum);
+              except
+                hr:=1;
+              end;
+              if hr = 0 then
+              begin
+                ffehl:=0;
+                ho:=1;
+              end else begin
+                ho:=0;
+                ffehl:=ffehl+1;
+                if ffehl > 3 then
+                begin
+                  Label2.Caption:='File: '+ExtractFilePath(ParamStr(0))+'daten.fly nicht vorhanden, Abbruch';
+                  habb:=1;
+                  Label8.Caption:='';
+                  ListBox1.Items.Clear;
+                  ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-abbruch.bat'), nil, nil, SW_SHOWMINIMIZED);
+                end;
+              end;
             end else begin
               ho:=0;
               ffehl:=ffehl+1;
@@ -2444,23 +2458,12 @@ begin
               end;
             end;
           end else begin
-            ho:=0;
-            ffehl:=ffehl+1;
-            if ffehl > 3 then
-            begin
-              Label2.Caption:='File: '+ExtractFilePath(ParamStr(0))+'daten.fly nicht vorhanden, Abbruch';
-              habb:=1;
-              Label8.Caption:='';
-              ListBox1.Items.Clear;
-              ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-abbruch.bat'), nil, nil, SW_SHOWMINIMIZED);
-            end;
+            Label2.Caption:='ShellExecute Copy Returncode: '+IntToStr(h1);
+            habb:=1;
+            Label8.Caption:='';
+            ListBox1.Items.Clear;
+            ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-abbruch.bat'), nil, nil, SW_SHOWMINIMIZED);
           end;
-        end else begin
-          Label2.Caption:='ShellExecute Copy Returncode: '+IntToStr(h1);
-          habb:=1;
-          Label8.Caption:='';
-          ListBox1.Items.Clear;
-          ShellExecute(0, nil, PChar(ExtractFilePath(ParamStr(0))+'dump1090-abbruch.bat'), nil, nil, SW_SHOWMINIMIZED);
         end;
       end else begin
         Label2.Caption:='File: '+ExtractFilePath(ParamStr(0))+'daten.txt nicht vorhanden, Abbruch';
