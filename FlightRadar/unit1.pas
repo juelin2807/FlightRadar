@@ -1,4 +1,3 @@
-
 unit Unit1;
 
 {$mode objfpc}{$H+}
@@ -111,7 +110,7 @@ type
       const aArgs: ICoreWebView2NavigationCompletedEventArgs);
     procedure ZConnection1AfterConnect(Sender: TObject);
   protected
-    // It's necessary to handle these messages to call NotifyParentWindowPositionChanged or some page elements will be misaligned.
+// It's necessary to handle these messages to call NotifyParentWindowPositionChanged or some page elements will be misaligned.
     procedure WMMove(var aMessage : TWMMove); message WM_MOVE;
     procedure WMMoving(var aMessage : TMessage); message WM_MOVING;
   private
@@ -1322,6 +1321,8 @@ begin
   Kartenpunkt.Lat:=hlat;
   Kartenpunkt.Lon:=hlong;
   MapView1.Center:=Kartenpunkt;
+  MapView1.Repaint;
+  MapView1.Refresh;
   MapView1.SaveToFile(TJpegImage, ExtractFilePath(ParamStr(0))+'ProcMap.jpg');
   MapView1.Visible:=False;
   PaintBox1.Visible:=True;
@@ -4113,6 +4114,7 @@ begin
     image3.Canvas.TextOut(30,230,'über  2000m');
     image3.Canvas.TextOut(30,250,'ab    1000m');
     image3.Canvas.TextOut(30,270,'unter 1000m');
+    h3:=ExtractFilePath(ParamStr(0));
     if FileExists(ExtractFilePath(ParamStr(0))+'zeit.dat') then
     begin
       FileMode:=fmOpenRead;
