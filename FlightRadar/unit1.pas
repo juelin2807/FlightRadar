@@ -50,6 +50,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label10: TLabel;
+    Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
@@ -1326,6 +1327,7 @@ begin
   MapView1.SaveToFile(TJpegImage, ExtractFilePath(ParamStr(0))+'ProcMap.jpg');
   MapView1.Visible:=False;
   PaintBox1.Visible:=True;
+  Label5.Caption:='Zoom: '+IntToStr(zoomfakt);
   SpeedButton1.Visible:=True;
   SpeedButton2.Visible:=True;
   SpeedButton3.Visible:=True;
@@ -2181,6 +2183,7 @@ begin
   if zoomfakt > 2 then
   begin
     zoomfakt:=zoomfakt-1;
+    Label5.Caption:='Zoom: '+IntToStr(zoomfakt);
     SpeedButton2.Visible:=True;
   end;
   if zoomfakt = 2 then SpeedButton1.Visible:=False;
@@ -2196,6 +2199,7 @@ begin
   if zoomfakt < 19 then
   begin
     zoomfakt:=zoomfakt+1;
+    Label5.Caption:='Zoom: '+IntToStr(zoomfakt);
     SpeedButton1.Visible:=True;
   end;
   if zoomfakt = 19 then SpeedButton2.Visible:=False;
@@ -3960,6 +3964,7 @@ begin
     StringGrid1.Visible:=False;
     pmeterl:=0;
     loeim2:=1;
+    Label5.Caption:='Zoom:';
     Label8.Caption:='';
     Label9.Caption:='';
     StringGrid1.RowCount:=2;

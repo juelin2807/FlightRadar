@@ -1,14 +1,14 @@
 object Form1: TForm1
-  Left = 0
-  Height = 874
-  Top = 0
-  Width = 1595
+  Left = 292
+  Height = 866
+  Top = 6
+  Width = 1446
   HorzScrollBar.Visible = False
   VertScrollBar.Visible = False
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  ClientHeight = 874
-  ClientWidth = 1595
+  ClientHeight = 0
+  ClientWidth = 0
   Color = clBlack
   Font.CharSet = ANSI_CHARSET
   Font.Height = -21
@@ -320,13 +320,13 @@ object Form1: TForm1
     0000FFFFFFFFFFFF0000FFFFFFFFFFFF0000FFFFFFFFFFFF0000FFFFFFFFFFFF
     0000
   }
+  LCLVersion = '4.2.0.0'
+  Visible = True
   OnActivate = FormActivate
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  LCLVersion = '3.6.0.0'
-  Visible = True
   object Label1: TLabel
     Left = 0
     Height = 32
@@ -382,10 +382,10 @@ object Form1: TForm1
     Transparent = False
   end
   object Label4: TLabel
-    Left = 0
+    Left = 350
     Height = 30
     Top = 704
-    Width = 1595
+    Width = 978
     AutoSize = False
     Caption = '===================================================================================================='
     Color = clInfoBk
@@ -465,7 +465,7 @@ object Form1: TForm1
     OnClick = Button3Click
   end
   object Label8: TLabel
-    Left = 1518
+    Left = 1370
     Height = 63
     Top = 742
     Width = 77
@@ -540,7 +540,7 @@ object Form1: TForm1
     TabOrder = 3
   end
   object ListBox1: TListBox
-    Left = 1490
+    Left = 1341
     Height = 404
     Top = 300
     Width = 105
@@ -562,18 +562,26 @@ object Form1: TForm1
     Height = 672
     Top = 32
     Width = 1490
+    Active = True
     DownloadEngine = MapView1.BuiltInDLE
     DrawingEngine = MapView1.BuiltInDE
+    Layers = <>
     Font.Color = clBlack
-    MapProvider = 'OpenStreetMap Mapnik'
-    OnZoomChange = MapView1ZoomChange
+    MapProvider = 'OpenStreetMap Standard'
+    MapCenter.Longitude = 7.953
+    MapCenter.Latitude = 51.262
+    ParentFont = False
+    POITextBgOpacity = 0.550000011920929
+    TabOrder = 5
+    Zoom = 4
     OnChange = MapView1Change
+    OnZoomChange = MapView1ZoomChange
   end
   object PaintBox1: TPaintBox
     Left = 0
-    Height = 672
+    Height = 670
     Top = 32
-    Width = 1490
+    Width = 1341
     Anchors = [akTop, akLeft, akRight, akBottom]
     OnMouseDown = PaintBox1MouseDown
     OnPaint = PaintBox1Paint
@@ -601,8 +609,8 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     Transparent = False
-    OnClick = SpeedButton3Click
     ParentFont = False
+    OnClick = SpeedButton3Click
   end
   object SpeedButton4: TSpeedButton
     Left = 40
@@ -620,8 +628,8 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     Transparent = False
-    OnClick = SpeedButton4Click
     ParentFont = False
+    OnClick = SpeedButton4Click
   end
   object SpeedButton1: TSpeedButton
     Left = 0
@@ -639,8 +647,8 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     Transparent = False
-    OnClick = SpeedButton1Click
     ParentFont = False
+    OnClick = SpeedButton1Click
   end
   object SpeedButton2: TSpeedButton
     Left = 0
@@ -658,8 +666,8 @@ object Form1: TForm1
     Font.Quality = fqDraft
     Font.Style = [fsBold]
     Transparent = False
-    OnClick = SpeedButton2Click
     ParentFont = False
+    OnClick = SpeedButton2Click
   end
   object WVWindowParent1: TWVWindowParent
     Left = 0
@@ -687,12 +695,6 @@ object Form1: TForm1
     ParentFont = False
     Transparent = False
   end
-  object Image3: TImage
-    Left = 1448
-    Height = 300
-    Top = 0
-    Width = 147
-  end
   object WVWindowParent2: TWVWindowParent
     Left = 0
     Height = 672
@@ -702,7 +704,7 @@ object Form1: TForm1
     Browser = WVBrowser2
   end
   object Edit99: TEdit
-    Left = 1563
+    Left = 1414
     Height = 32
     Top = 0
     Width = 32
@@ -711,6 +713,31 @@ object Form1: TForm1
     TabOrder = 6
     Visible = False
     OnKeyDown = Edit99KeyDown
+  end
+  object Image3: TImage
+    Left = 1299
+    Height = 300
+    Top = 0
+    Width = 147
+  end
+  object Label5: TLabel
+    Left = 1328
+    Height = 30
+    Top = 704
+    Width = 118
+    Alignment = taCenter
+    AutoSize = False
+    Color = clNavy
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
   end
   object Timer1: TTimer
     Enabled = False
@@ -738,10 +765,10 @@ object Form1: TForm1
     HostName = 'localhost'
     Port = 3306
     Database = 'flight'
-    User = 'flight'
-    Password = 'flight'
+    User = 'juelin'
+    Password = 'qbasic1'
     Protocol = 'mariadb'
-    LibraryLocation = 'E:\Lazarus\FlightRadar\libmariadb32.dll'
+    LibraryLocation = 'E:\MariaDB\lib\libmariadb64.dll'
     Left = 808
     Top = 550
   end
